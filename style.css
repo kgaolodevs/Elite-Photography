@@ -6,6 +6,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 @font-face {
@@ -29,12 +30,11 @@ html {
   --header2: calc(3.5rem + 1vw);
   --header3: calc(3rem + 1vw);
   --header4: calc(2.4rem + 1vw);
-  --text: calc(1.5rem + 1vw);
+  --text: calc(1.2rem + 1vw);
   --big: calc(2.4rem + 1vw);
   --color-primary: #41414141;
   --color-secondary: #52525252;
   --special-color: #906272;
-  overflow-x: hidden;
 }
 
 .flex {
@@ -54,14 +54,62 @@ html {
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   font-family: "Ruhl Regular";
-  background-color: #25242a;
+}
+
+.site {
+  background-color: white;
+}
+
+.site a {
+  font-size: var(--text);
+  color: black;
+}
+
+.site .main-header {
+  -webkit-box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.226);
+          box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.226);
+}
+
+.site .main-header .navigation {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10vh;
 }
 
 .site .main-header .navigation__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
   font-family: "Great Vibes Regular";
   font-size: var(--header1);
+}
+
+.site .main-header .navigation__items {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.site .hero__content--title {
+  font-size: var(--header2);
+}
+
+.site .hero__content--subtext {
+  font-size: var(--text);
 }
 /*# sourceMappingURL=style.css.map */
