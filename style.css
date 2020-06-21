@@ -8,6 +8,21 @@
   list-style: none;
 }
 
+@font-face {
+  font-family: "Ruhl Regular";
+  src: url(./fonts/FrankRuhlLibre-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Ruhl Medium";
+  src: url(./fonts/FrankRuhlLibre-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Great Vibes Regular";
+  src: url(./fonts/GreatVibes-Regular.ttf);
+}
+
 html {
   font-size: 62.5%;
   --header1: calc(2rem + 1vw);
@@ -20,11 +35,6 @@ html {
   --color-secondary: #52525252;
   --special-color: #906272;
   overflow-x: hidden;
-}
-
-body {
-  height: 100vh;
-  width: 100vw;
 }
 
 .flex {
@@ -41,5 +51,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Ruhl Regular";
+  background-color: #25242a;
+}
+
+.site .main-header .navigation__logo {
+  font-family: "Great Vibes Regular";
+  font-size: var(--header1);
 }
 /*# sourceMappingURL=style.css.map */
