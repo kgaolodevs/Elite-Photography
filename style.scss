@@ -62,6 +62,7 @@ body {
 
   .main-header {
     box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.226);
+    position: relative;
     .navigation {
       width: 90%;
       margin: auto;
@@ -89,28 +90,56 @@ body {
   .hero {
     min-height: 90vh;
     width: 95%;
-    margin: 0 0 0 auto;
+    margin: 0 0 0 5rem;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
+
     &__content {
       // outline: crimson 0.2rem solid;
-      flex: 1 1 40rem;
+      text-align: center;
+      flex: 2 1 40rem;
+      padding: 3rem 0 3rem 0;
+
       &--title {
         font-size: var(--header2);
       }
 
       &--subtext {
+        padding: 6rem 3rem;
         font-size: var(--text);
+      }
+
+      &--galleryLink {
+        padding: 2rem 4rem;
+        border: black solid 0.2rem;
       }
     }
 
     &__image {
-      align-self: flex-end;
+      // align-self: flex-end;
+      background: linear-gradient(#dad8dd, #dad1d4);
+      flex: 1 1 40rem;
+      position: relative;
+      z-index: 1;
+
       &--model {
-        flex: 1 1 40rem;
-        height: 70rem;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
         // outline: crimson 0.5rem solid;
+      }
+
+      .plant {
+        position: absolute;
+        bottom: 0;
+        left: -11%;
+        height: 35rem;
+        z-index: -1;
+      }
+
+      &--plant-2 {
+        margin-left: 70%;
       }
     }
   }
