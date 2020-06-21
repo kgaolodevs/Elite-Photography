@@ -87,13 +87,30 @@ body {
   }
 
   .hero {
+    min-height: 90vh;
+    width: 95%;
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     &__content {
+      // outline: crimson 0.2rem solid;
+      flex: 1 1 40rem;
       &--title {
         font-size: var(--header2);
       }
 
       &--subtext {
         font-size: var(--text);
+      }
+    }
+
+    &__image {
+      align-self: flex-end;
+      &--model {
+        flex: 1 1 40rem;
+        height: 70rem;
+        // outline: crimson 0.5rem solid;
       }
     }
   }
