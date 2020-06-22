@@ -158,6 +158,18 @@ body {
     flex-wrap: wrap;
     &__image {
       flex: 1 1 40rem;
+      position: relative;
+
+      &--title {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -15%);
+        font-size: var(--big);
+        letter-spacing: 2rem;
+        color: white;
+        text-shadow: 0 0.8rem 0.5rem var(--color-primary);
+      }
 
       &--model {
         height: 100%;
@@ -284,6 +296,16 @@ body {
           font-size: var(--header1);
           text-decoration: underline;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 471px) {
+  .site {
+    .about {
+      &__content {
+        padding: 8rem 2.5rem;
       }
     }
   }

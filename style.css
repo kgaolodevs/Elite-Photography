@@ -191,6 +191,19 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
+  position: relative;
+}
+
+.site .about__image--title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15%);
+          transform: translate(-50%, -15%);
+  font-size: var(--big);
+  letter-spacing: 2rem;
+  color: white;
+  text-shadow: 0 0.8rem 0.5rem var(--color-primary);
 }
 
 .site .about__image--model {
@@ -349,6 +362,12 @@ body {
     color: white;
     font-size: var(--header1);
     text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 471px) {
+  .site .about__content {
+    padding: 8rem 2.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
