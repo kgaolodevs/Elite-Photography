@@ -34,6 +34,7 @@ html {
 
   --color-primary: #41414141;
   --color-secondary: #52525252;
+  --color-gray: #525252;
   --special-color: #906272;
 
   // overflow-x: hidden;
@@ -109,6 +110,7 @@ body {
 
       &--subtext {
         padding: 6rem 3rem;
+        color: var(--color-gray);
         font-size: var(--text);
       }
 
@@ -149,6 +151,12 @@ body {
       }
     }
   }
+
+  .about {
+    display: flex;
+    &__image {
+    }
+  }
 }
 
 // ANIMATIONS
@@ -184,7 +192,7 @@ body {
 }
 
 .navigation__menu,
-.navigation__items {
+.navigation__check {
   display: none;
 }
 

@@ -34,6 +34,7 @@ html {
   --big: calc(2.4rem + 1vw);
   --color-primary: #41414141;
   --color-secondary: #52525252;
+  --color-gray: #525252;
   --special-color: #906272;
 }
 
@@ -134,6 +135,7 @@ body {
 
 .site .hero__content--subtext {
   padding: 6rem 3rem;
+  color: var(--color-gray);
   font-size: var(--text);
 }
 
@@ -174,6 +176,12 @@ body {
 
 .site .hero__image--plant-2 {
   margin-left: 70%;
+}
+
+.site .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @-webkit-keyframes fadeIn {
@@ -239,7 +247,7 @@ body {
 }
 
 .navigation__menu,
-.navigation__items {
+.navigation__check {
   display: none;
 }
 
