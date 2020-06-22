@@ -206,19 +206,23 @@ body {
           flex: 1 1 40rem;
   background: var(--color-gray);
   color: white;
+  padding: 8rem 5rem;
 }
 
 .site .about__content--title {
   font-size: var(--big);
   font-family: "Great Vibes Regular";
+  text-align: center;
 }
 
 .site .about__content--subtext h1 {
   font-size: var(--header1);
+  margin: 6rem 0 3rem 0;
 }
 
 .site .about__content--subtext p {
   font-size: var(--small);
+  padding-bottom: 5rem;
 }
 
 @-webkit-keyframes fadeIn {

@@ -170,19 +170,23 @@ body {
       flex: 1 1 40rem;
       background: var(--color-gray);
       color: white;
+      padding: 8rem 5rem;
 
       &--title {
         font-size: var(--big);
         font-family: "Great Vibes Regular";
+        text-align: center;
       }
 
       &--subtext {
         h1 {
           font-size: var(--header1);
+          margin: 6rem 0 3rem 0;
         }
 
         p {
           font-size: var(--small);
+          padding-bottom: 5rem;
         }
       }
     }
