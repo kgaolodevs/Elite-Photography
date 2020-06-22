@@ -32,7 +32,7 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.2rem + 1vw);
   --big: calc(2.4rem + 1vw);
-  --small: calc(0.8rem + 1vw);
+  --small: calc(0.5rem + 1vw);
   --color-primary: #41414141;
   --color-secondary: #52525252;
   --color-gray: #525252;
@@ -305,6 +305,57 @@ body {
   display: none;
 }
 
+.portfolio {
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+.portfolio__title {
+  background: #525252da;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2.5rem 4rem;
+  text-align: center;
+}
+
+.portfolio__title h1 {
+  font-size: var(--big);
+}
+
+.portfolio__title p {
+  font-size: var(--small);
+}
+
+.portfolio img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio__image-1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.portfolio__image-2 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
 @media screen and (max-width: 799px) {
   .site .navigation {
     position: relative;
@@ -362,6 +413,17 @@ body {
     color: white;
     font-size: var(--header1);
     text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio {
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .portfolio img {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
 
