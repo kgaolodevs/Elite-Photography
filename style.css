@@ -32,6 +32,7 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.2rem + 1vw);
   --big: calc(2.4rem + 1vw);
+  --small: calc(0.8rem + 1vw);
   --color-primary: #41414141;
   --color-secondary: #52525252;
   --color-gray: #525252;
@@ -182,6 +183,42 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.site .about__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.site .about__image--model {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.site .about__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  background: var(--color-gray);
+  color: white;
+}
+
+.site .about__content--title {
+  font-size: var(--big);
+  font-family: "Great Vibes Regular";
+}
+
+.site .about__content--subtext h1 {
+  font-size: var(--header1);
+}
+
+.site .about__content--subtext p {
+  font-size: var(--small);
 }
 
 @-webkit-keyframes fadeIn {

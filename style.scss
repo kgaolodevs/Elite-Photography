@@ -31,6 +31,7 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.2rem + 1vw);
   --big: calc(2.4rem + 1vw);
+  --small: calc(0.8rem + 1vw);
 
   --color-primary: #41414141;
   --color-secondary: #52525252;
@@ -154,7 +155,36 @@ body {
 
   .about {
     display: flex;
+    flex-wrap: wrap;
     &__image {
+      flex: 1 1 40rem;
+
+      &--model {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      flex: 1 1 40rem;
+      background: var(--color-gray);
+      color: white;
+
+      &--title {
+        font-size: var(--big);
+        font-family: "Great Vibes Regular";
+      }
+
+      &--subtext {
+        h1 {
+          font-size: var(--header1);
+        }
+
+        p {
+          font-size: var(--small);
+        }
+      }
     }
   }
 }
