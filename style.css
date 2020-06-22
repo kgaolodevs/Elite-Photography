@@ -32,6 +32,8 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.2rem + 1vw);
   --big: calc(2.4rem + 1vw);
+  --bigger: calc(5rem + 1vw);
+  --biggest: calc(9rem + 1vw);
   --small: calc(0.5rem + 1vw);
   --color-primary: #41414141;
   --color-secondary: #52525252;
@@ -243,6 +245,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .site .contact__content {
@@ -250,6 +254,66 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20rem;
           flex: 1 1 20rem;
+  height: 100%;
+  padding: 15rem 0 0 20rem;
+}
+
+.site .contact__content--title {
+  padding-bottom: 3rem;
+}
+
+.site .contact__content--title h1 {
+  font-size: var(--bigger);
+}
+
+.site .contact__content--title h2 {
+  font-size: var(--biggest);
+  color: var(--special-color);
+}
+
+.site .contact__content--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.site .contact__content--form label {
+  font-size: var(--small);
+  font-weight: bold;
+  padding-bottom: 0.8rem;
+}
+
+.site .contact__content--form input {
+  width: 22vw;
+  height: 4vh;
+  margin-bottom: 1rem;
+  background: var(--color-gray);
+  border: none;
+  color: white;
+  padding: 0 1rem 0 1rem;
+}
+
+.site .contact__content--form button {
+  height: 4vh;
+  width: 11vw;
+  margin-top: 2rem;
+  color: white;
+  background: var(--special-color);
+  border: none;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.site .contact__content--form button:hover {
+  cursor: pointer;
+  background: #63434f;
 }
 
 .site .contact__image {
