@@ -54,6 +54,7 @@ body {
 
 .site {
   background-color: white;
+  animation: fadeIn 0.5s ease-in;
 
   a {
     font-size: var(--text);
@@ -88,9 +89,10 @@ body {
   }
 
   .hero {
+    animation: fadeIn 1s ease-in-out;
     min-height: 90vh;
-    width: 95%;
-    margin: 0 0 0 5rem;
+    // width: 95%;
+    // margin: 0 0 0 5rem;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
@@ -136,10 +138,110 @@ body {
         left: -11%;
         height: 35rem;
         z-index: -1;
+        transform: translateY(20%) rotateZ(-10deg) rotateX(-90deg);
+        animation: dropIn 1.5s ease-in-out 0.5s forwards,
+          plantShake 2.5s infinite ease-in-out alternate-reverse 2s;
+        transform-origin: bottom;
       }
 
       &--plant-2 {
         margin-left: 70%;
+      }
+    }
+  }
+}
+
+// ANIMATIONS
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dropIn {
+  0% {
+    transform: translateY(20%) rotateZ(-10deg) rotateX(-90deg);
+  }
+
+  100% {
+    transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+  }
+}
+
+@keyframes plantShake {
+  from {
+    transform: rotateZ(-5deg);
+  }
+
+  to {
+    transform: rotateZ(0);
+  }
+}
+
+.navigation__menu,
+.navigation__items {
+  display: none;
+}
+
+// Breakpoints
+
+@media screen and (max-width: 799px) {
+  .site {
+    .navigation {
+      position: relative;
+      &__menu {
+        display: block;
+        span {
+          padding: 0.2rem 2rem;
+          background: var(--color-primary);
+          margin: 0.5rem 0;
+          display: block;
+        }
+      }
+
+      &__check {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -1%;
+        transform: translate(5%, -50%);
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 100;
+
+        &:checked + .navigation__items {
+          transform: translate(-100%);
+        }
+
+        &:checked ~ .navigation__menu span {
+          background-color: white;
+        }
+      }
+
+      &__items {
+        background: #25242a;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 2;
+        align-items: center;
+        flex-direction: column;
+        transition: transform 1s ease-in-out;
+
+        a {
+          color: white;
+          font-size: var(--header1);
+          text-decoration: underline;
+        }
       }
     }
   }
