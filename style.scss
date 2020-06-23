@@ -39,6 +39,7 @@ html {
   --color-secondary: #52525252;
   --color-gray: #525252;
   --special-color: #906272;
+  scroll-behavior: smooth;
 
   // overflow-x: hidden;
 }
@@ -385,6 +386,9 @@ body {
       position: relative;
       &__menu {
         display: block;
+        &:hover {
+          cursor: pointer;
+        }
         span {
           padding: 0.2rem 2rem;
           background: var(--color-primary);

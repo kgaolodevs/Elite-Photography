@@ -39,6 +39,7 @@ html {
   --color-secondary: #52525252;
   --color-gray: #525252;
   --special-color: #906272;
+  scroll-behavior: smooth;
 }
 
 .flex {
@@ -482,6 +483,9 @@ body {
   }
   .site .navigation__menu {
     display: block;
+  }
+  .site .navigation__menu:hover {
+    cursor: pointer;
   }
   .site .navigation__menu span {
     padding: 0.2rem 2rem;
