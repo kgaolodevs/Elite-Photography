@@ -467,6 +467,12 @@ body {
     footer {
       h4 {
         text-align: center;
+        order: 2;
+      }
+
+      ul {
+        padding-top: 2rem;
+        order: 1;
       }
     }
   }

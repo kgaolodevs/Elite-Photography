@@ -574,6 +574,15 @@ body {
   }
   .site footer h4 {
     text-align: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .site footer ul {
+    padding-top: 2rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
