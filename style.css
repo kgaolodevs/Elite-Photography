@@ -479,6 +479,28 @@ body {
 @media screen and (max-width: 799px) {
   .site .navigation {
     position: relative;
+    /*
+      &__check {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -1%;
+        transform: translate(5%, -50%);
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 100;
+
+        &:checked + .navigation__items {
+          transform: translate(-100%);
+        }
+
+        &:checked ~ .navigation__menu span {
+          background-color: white;
+        }
+      }
+      */
   }
   .site .navigation__menu {
     display: block;
@@ -488,26 +510,6 @@ body {
     background: var(--color-primary);
     margin: 0.5rem 0;
     display: block;
-  }
-  .site .navigation__check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: -1%;
-    -webkit-transform: translate(5%, -50%);
-            transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 100;
-  }
-  .site .navigation__check:checked + .navigation__items {
-    -webkit-transform: translate(-100%);
-            transform: translate(-100%);
-  }
-  .site .navigation__check:checked ~ .navigation__menu span {
-    background-color: white;
   }
   .site .navigation__items {
     background: #25242a;

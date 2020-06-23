@@ -68,6 +68,7 @@ body {
   .main-header {
     box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.226);
     position: relative;
+
     .navigation {
       width: 90%;
       margin: auto;
@@ -392,6 +393,7 @@ body {
         }
       }
 
+      /*
       &__check {
         display: block;
         position: absolute;
@@ -411,6 +413,9 @@ body {
         &:checked ~ .navigation__menu span {
           background-color: white;
         }
+      }
+      */
+      .navigation__menu--open {
       }
 
       &__items {
