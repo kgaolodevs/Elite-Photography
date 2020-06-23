@@ -393,7 +393,6 @@ body {
         }
       }
 
-      /*
       &__check {
         display: block;
         position: absolute;
@@ -414,8 +413,23 @@ body {
           background-color: white;
         }
       }
-      */
+
       .navigation__menu--open {
+        transform: translate(-100%);
+      }
+
+      .toggle .line1 {
+        transform: rotateZ(45deg) translateY(300%);
+        background-color: white;
+      }
+
+      .toggle .line2 {
+        opacity: 0;
+      }
+
+      .toggle .line3 {
+        transform: rotateZ(-45deg) translateY(-300%);
+        background-color: white;
       }
 
       &__items {
